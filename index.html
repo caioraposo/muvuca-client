@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script>let $ = require('jquery');</script>
+  	</head>
+	<body>
+		<div id="slideshow">
+			<div>
+				<img src="http://farm6.static.flickr.com/5224/5658667829_2bb7d42a9c_m.jpg" height="1200px" width="800">
+			</div>
+			<div>
+			   <img src="http://farm6.static.flickr.com/5230/5638093881_a791e4f819_m.jpg" height="1200" width="800">
+			</div>
+		   	<div>
+			 Pretty cool eh? This slide is proof the content can be anything.
+			</div>
+		</div>
+		<script>
+			$("#slideshow > div:gt(0)").hide();
+
+			setInterval(function() {
+			  $('#slideshow > div:first')
+				.fadeOut(1000)
+				.next()
+				.fadeIn(1000)
+				.end()
+				.appendTo('#slideshow');
+			}, 3000);
+		</script>
+	</body>
+</html>
