@@ -2,15 +2,27 @@
 	"name": "muvuca",
 	"version": "1.0.0",
 	"description": "",
-	"main": "main.js",
+	"main": "electron.js",
 	"scripts": {
-		"start": "electron .",
-		"dev": "electron . --inspect=5858"
+		"start": "concurrently --kill-others \"npm run dev\" \"electron .\"",
+		"dev": "webpack-dev-server --mode development"
 	},
 	"author": "Caio Raposo",
 	"license": "MIT",
 	"dependencies": {
+		"css-loader": "^2.1.1",
 		"electron": "^5.0.1",
-		"jquery": "^3.4.1"
+		"html-webpack-plugin": "^3.2.0",
+		"jquery": "^3.4.1",
+		"vue": "^2.6.10",
+		"vue-loader": "^15.7.0",
+		"vue-style-loader": "^4.1.2",
+		"vue-template-compiler": "^2.6.10",
+		"webpack": "^4.31.0",
+		"webpack-cli": "^3.3.2",
+		"webpack-dev-server": "^3.3.1"
+	},
+	"devDependencies": {
+		"concurrently": "^4.1.0"
 	}
 }
