@@ -1,14 +1,16 @@
 <template>
 	<div id="app">
 		{{ pessoas }}
-		aoskdjaksdj
 	</div>
 </template>
 
 <script>
+
 	export default {
-		data: {
-			pessoas: 43
+		data() {
+			return {
+				pessoas: 53
+			}
 		}	
 	}
 </script>

@@ -15,5 +15,6 @@ module.exports = {
 			template: './index.html',
 		}),
 		new VueLoaderPlugin(),
-	]
+	],
+	target: 'node-webkit' // To make child_process usable by Vuejs
 };
