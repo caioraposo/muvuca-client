@@ -1,16 +1,20 @@
 <template>
 	<div id="app">
-		<h1>{{ pessoas }}</h1>
+		<h2>Total de pessoas: {{ total }}</h2>
+		<h2>Pessoas no local: {{ pessoas }}</h2>
+		<slideshow></slideshow>
 	</div>
 </template>
 
 <script>
 	const { spawn } = require('child_process');
+	import Slideshow from './components/shared/slideshow/Slideshow.vue';
 	
 
 	export default {
 		data() {
 			return {
+				total: 342,
 				pessoas: 0
 			}
 		},
@@ -25,12 +29,16 @@
 				});
 
 			}, 3000)
+		},
+		components: {
+			'slideshow': Slideshow
 		}
 	}
 </script>
 
 <style>
-	h1 {
-		font-size: 100px;
+	h2 {
+		font-size: 50px;
+		font-family: Helvetica;
 	}
 </style>
