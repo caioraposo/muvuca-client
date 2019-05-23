@@ -25,7 +25,8 @@
 				});
 
 				ls.stdout.on('data', (data) => {
-					this.pessoas = data;
+					parseInt(data);
+					this.pessoas = data - 1;
 				});
 
 			}, 3000)
@@ -38,6 +39,7 @@
 
 <style>
 	h2 {
+		text-align: center;
 		font-size: 50px;
 		font-family: Helvetica;
 	}

@@ -1,10 +1,10 @@
 {
   "name": "muvuca",
   "version": "1.0.0",
-  "description": "",
+  "description": "Onde tem muvuca",
   "main": "electron.js",
   "scripts": {
-    "start": "concurrently --kill-others \"npm run dev\" \"electron .\"",
+    "start": "concurrently --kill-others \"npm run dev\" \"electron --no-sandbox .\"",
     "dev": "webpack-dev-server --mode development"
   },
   "author": "Caio Raposo",
