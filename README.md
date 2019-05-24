@@ -1,12 +1,6 @@
-Deploy:
+# Muvuca
 
-'''
-npm install
-npm start
-'''
+Para fazer o deploy da aplicação, basta
 
-Caso não funcione, rode o concurrently na mão:
-
-'''
-node_modules/concurrently/bin/concurrently.js "npm run dev" "electron ."
-'''
+> npm install
+> npm start
