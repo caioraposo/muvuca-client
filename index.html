@@ -1,36 +1,9 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="styles.css">
-		<script>let $ = require('jquery');</script>
-  	</head>
-	<body>
-		<div id="slideshow">
-			<div>
-				<img src="uploads/engenharia_de_qualidade.png">
-			</div>
-			<div>
-				<img src="uploads/semana_santa.png">
-			</div>
-		   	<div>
-				<img src="uploads/enem.jpeg">
-			</div>
-			<div>
-				<img src="uploads/pascoa.jpeg">
-			</div>
-		</div>
-		<script>
-			$("#slideshow > div:gt(0)").hide();
-
-			setInterval(function() {
-			  $('#slideshow > div:first')
-				.fadeOut(3000)
-				.next()
-				.fadeIn(3000)
-				.end()
-				.appendTo('#slideshow');
-			}, 6000);
-		</script>
-	</body>
+<head>
+</head>
+<body>
+	<div id="app">
+	</div>
+</body>
 </html>
